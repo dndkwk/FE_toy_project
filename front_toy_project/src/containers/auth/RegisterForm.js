@@ -1,13 +1,24 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { changeField, initializeForm } from '../../modules/auth';
+import { changeField, initializeForm, register } from '../../modules/auth';
 import AuthForm from '../../components/auth/AuthForm';
+import { check } from '../../modules/user';
+import { withRouter } from 'react-router';
 
-const RegisterForm = () => {
+const RegisterForm = ({ history }) => {
   const dispatch = useDispatch();
-  const { form } = useSelector(({ auth }) => ({
+  const { form, auth, authError, user } = useSelector(({ auth, user }) => ({
     form: auth.register,
+    auth: auth.auth,
+    authError: auth.authError,
+    user: user.user,
   }));
+
+  useEffect(() => {
+    if (user) {
+      history.push('/');
+    }
+  }, [history, user]);
 
   const onChange = (e) => {
     const { value, name } = e.target;
@@ -22,15 +33,40 @@ const RegisterForm = () => {
 
   const onSubmit = (e) => {
     e.preventDefault();
+    const { username, password, passwordConfirm } = form;
+    if (password !== passwordConfirm) {
+      return;
+    }
+    dispatch(register({ username, password }));
   };
 
   useEffect(() => {
     dispatch(initializeForm('login'));
   }, [dispatch]);
 
+  useEffect(() => {
+    if (authError) {
+      console.log('오류발생');
+      console.log(authError);
+      return;
+    }
+    if (auth) {
+      console.log('회원가입 성공');
+      console.log(auth);
+      dispatch(check());
+    }
+  }, [auth, authError, dispatch]);
+
+  useEffect(() => {
+    if (user) {
+      console.log('check API 성공');
+      console.log(user);
+    }
+  }, [user]);
+
   return (
     <AuthForm
-      type="login"
+      type="register"
       form={form}
       onChange={onChange}
       onSubmit={onSubmit}
@@ -38,4 +74,4 @@ const RegisterForm = () => {
   );
 };
 
-export default RegisterForm;
+export default withRouter(RegisterForm);

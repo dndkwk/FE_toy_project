@@ -47,7 +47,7 @@ const initialState = {
   register: {
     username: '',
     password: '',
-    passwordConofirm: '',
+    passwordConfirm: '',
   },
   login: {
     username: '',
