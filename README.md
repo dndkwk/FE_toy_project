@@ -1,6 +1,6 @@
 # FE_toy_project
 
-React를 이용해 토이프로젝트 진행
+React를 이용해 토이프로젝트 진행, 백엔드는 나중에 만들 것
 <br> 프로젝트하면서 궁금한 점 정리
 <br>styled의 의미: JS 안에 CSS를 작성하는 것
 <br>&:hover의 의미: 마우스 올려져 있을 때
@@ -11,4 +11,5 @@ React를 이용해 토이프로젝트 진행
 <br> useSelector: 리덕스의 state를 조회 가능
 <br> useEffect: 리액트 컴포넌트가 랜더링될 때마다 특정 작업을 수행하도록 만듬
 <br> useDispatch: 생성한 action을 발생시킬 수 있다.
-<br> redux-saga,middleware,dispatch,withRouter 알아보기
+<br> withRouter: 라우터에 의해서 호출된 컴포넌트가 아니여도 match,location,history 객체에 접근할 수 있도록 해줌, history.push('/') 는 홈으로 돌아가는 뜻
+<br> redux-saga,middleware 알아보기
