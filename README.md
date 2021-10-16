@@ -14,5 +14,6 @@ React를 이용해 토이프로젝트 진행, 백엔드는 나중에 만들 것
 <br> withRouter: 라우터에 의해서 호출된 컴포넌트가 아니여도 match,location,history 객체에 접근할 수 있도록 해줌, history.push('/') 는 홈으로 돌아가는 뜻
 <br>페이지 이동방법에는 withRouter또는 Link 컴포넌트 사용하는 방법이 있는데 Link 컴포넌트 사용하는 것을 권장
 <br>yield: 제너레이터 함수(function*) 를 중지하거나 재개하는데 사용 
-<br> <></> 의미
-<br>redux-saga 알아보기
+<br>redux-saga: 리덕스의 미들웨어, 리덕스가 액션을 수행하면 redux-saga에서 디스패치하여 redux의 액션을 가로챈 뒤, 액션의 역할을 수행 하고 다시 액션을 발행하여 데이터를 저장하거나 다른 이벤트를 수행
+<br> takeLatest 기능:
+
