@@ -43,7 +43,7 @@ const write = handleActions(
     }),
     [WRITE_POST]: (state) => ({ ...state, post: null, postError: null }),
     [WRITE_POST_SUCCESS]: (state, { payload: post }) => ({ ...state, post }),
-    [WRITE_POST_SUCCESS]: (state, { payload: postError }) => ({
+    [WRITE_POST_FAILURE]: (state, { payload: postError }) => ({
       ...state,
       postError,
     }),
