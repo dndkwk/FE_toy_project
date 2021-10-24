@@ -19,6 +19,7 @@ const buildLink = ({ username, tag, page }) => {
 };
 
 const Pagination = ({ page, lastPage, username, tag }) => {
+  console.log('여기옴');
   return (
     <PaginationBlock>
       <Button
