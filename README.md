@@ -23,4 +23,4 @@ React를 이용해 토이프로젝트 진행, 백엔드는 나중에 만들 것
 <br>{children}은 해당 컴포넌트를 사용하게 될때 그 컴포넌트를 부르는 태그안의 내용이 children에 삽입
 <br>axios: HTTP 요청을 Promisse기반으로 처리
 <br>제너레이터 함수: 함수를 특정구간에 멈춰 놓을 수 있고 다시 돌아가게 할 수도 있다.
-<br>quill공부
+<br>sanitize-html: html을 제거하는 것 뿐 아니라 특정 HTML만 허용하는 기능도 있다.
