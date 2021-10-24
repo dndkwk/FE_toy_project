@@ -10,7 +10,6 @@ const PaginationContainer = ({ location, match }) => {
     posts: posts.posts,
     loading: loading['posts/LIST_POSTS'],
   }));
-  console.log('여기옴');
   if (!posts || loading) {
     return null;
   }
