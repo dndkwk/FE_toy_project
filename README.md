@@ -4,8 +4,9 @@
 
 ![전체구조](https://user-images.githubusercontent.com/59908043/138862656-00f2de94-a857-434c-a802-ecd933eb8cbb.PNG)
 
+<br>page
 
-React를 이용해 토이프로젝트 진행, 백엔드는 나중에 만들 것
+React를 이용해 토이프로젝트 진행
 <br> 프로젝트하면서 궁금한 점 정리
 <br>styled의 의미: JS 안에 CSS를 작성하는 것
 <br>&:hover의 의미: 마우스 올려져 있을 때
